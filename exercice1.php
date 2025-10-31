@@ -1,3 +1,4 @@
+
 <?php
 
 // Définition de la classe Personne
@@ -16,8 +17,7 @@ class Personne {
         $this->_ville = $ville;
     }
 
-
-}
+    }
 
 public function getNom(){
         return $this->_nom;
@@ -52,3 +52,11 @@ public function getNom(){
     public function setVille($ville){
         $this->_ville = $ville;
     }
+
+
+       public function calculerAge(){
+        $dateNaissance = new DateTime($this->_dateNaissance);
+        $aujourdhui = new DateTime();
+        $difference = $aujourdhui->diff($dateNaissance);
+        $this->_age = $difference->y; 
+       }

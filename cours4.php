@@ -3,11 +3,11 @@
  //ordinateur.class.php
                 Class Ordinateur{
                     private $_marque;
-                    private $_cpuClock;
+                    private $_cpuClock; //la fréquence du processeur (en GHz).
 
 
 
-                    public function __construct($marque, $cpuClock){
+                    public function __construct($marque, $cpuClock){ //Le constructeur est une fonction spéciale exécutée automatiquement quand on crée un nouvel objet de cette classe.
 
                     }
                     public function getMarque(){

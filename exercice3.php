@@ -53,11 +53,9 @@ Class Voiture elec {
   
 
 
-    public function __construct($marque, $modele,){
-        $this->_marque = $marque;
-        $this->_modele = $modele; 
-        $this->_modele = $modele;
-      
+ public function __construct($marque, $modele, $autonomie) {
+        parent::__construct($marque, $modele,$autonomie); 
+        $this->_autonomie = $autonomie; 
 
 }
 public function __toString() {
@@ -65,9 +63,8 @@ public function __toString() {
         return $this->_marque.' '.$this->_modele.' '.$this->autonomie;
     }
 }      
-public function getMarque(){                                     
-    return $this->_marque;
-}
+
+
 public function getAutonomie(){                                     
     return $this->_autonomie;
 }

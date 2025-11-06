@@ -30,6 +30,10 @@ public function setModele($modele){
     $this->_modele = $modele;
 
 }
+public function getInfos() {
+        return "Voiture : " . $this->_marque . " " . $this->_modele;
+    }
+
 }
 
 
@@ -42,7 +46,7 @@ public function setModele($modele){
 
 
 
-Class Voiture {
+Class Voiture elec {
     private string $_marque;
     private string $_modele;
     private string $_autonomie;
@@ -82,10 +86,12 @@ public function setAutonomie($autonomie){
 
 }
 }
-$voiture1 = new Voiture("Peugeot", 408); 
-$voiture2 = new Voiture("BMW", i3 150,100); 
+$v1 = new Voiture("Peugeot", "408");
+$ve1 = new VoitureElec("BMW", "i3", 150); 
 
-echo $voiture1->getinfo()
+echo $v1->getInfos() . "<br/>";
+echo $ve1->getInfos() . "<br/>";
+
 
 
 

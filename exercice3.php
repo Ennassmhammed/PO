@@ -37,15 +37,6 @@ public function getInfos() {
 }
 
 
-
-
-
-
-
-
-
-
-
 Class Voiture elec {
     private string $_marque;
     private string $_modele;
@@ -53,14 +44,16 @@ Class Voiture elec {
   
 
 
- public function __construct($marque, $modele, $autonomie) {
+ public function __construct($marque, $modele) {
         parent::__construct($marque, $modele,$autonomie); 
         $this->_autonomie = $autonomie; 
 
 }
 public function __toString() {
     {
-        return $this->_marque.' '.$this->_modele.' '.$this->autonomie;
+        return $this->_marque.' '.$this->_modele;
+          parent::__construct($marque, $modele); 
+        $this->_autonomie = $autonomie; 
     }
 }      
 
@@ -84,7 +77,7 @@ public function setAutonomie($autonomie){
 }
 }
 $v1 = new Voiture("Peugeot", "408");
-$ve1 = new VoitureElec("BMW", "i3", 150); 
+$ve1 = new VoitureElec("BMW", "i3", 100); 
 
 echo $v1->getInfos() . "<br/>";
 echo $ve1->getInfos() . "<br/>";
